@@ -44,14 +44,14 @@ prob = BifurcationProblem(kindergarden, z0, setproperties(pard6 ; tauC =1.5),
   (@optic _.tauC);
   record_from_solution = record_from_solution_snow)
 
-opts_br = ContinuationPar(dsmin = 0.000001, dsmax = 0.001, ds = 0.00001, 
-# parameter interval
-p_max =  5.0, p_min = 0.01, 
-nev = 3, 
-newton_options = opt_newton, 
-max_steps = 100000, 
-n_inversion = 2000,
-detect_bifurcation = 3)
+opts_br = ContinuationPar(dsmin = 0.000001, dsmax = 0.001, ds = 0.0001, 
+  # parameter interval
+  p_max =  5.0, p_min = 0.01, 
+  nev = 3, 
+  newton_options = opt_newton, 
+  max_steps = 50000, 
+  n_inversion = 1000,
+  detect_bifurcation = 3)
 
 
 # compute the branch of solutions
